@@ -1,0 +1,36 @@
+{
+  "fields": [
+    {
+      "fieldName": "pan",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maskedPan",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typeCard",
+      "fieldType": "humo",
+      "fieldValues": "HUMO"
+    },
+    {
+      "fieldName": "cardTypeElma",
+      "fieldType": "credit",
+      "fieldValues": "CREDIT"
+    },
+    {
+      "fieldName": "expireDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "balance",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "relationships": [],
+  "service": "no",
+  "readOnly": true,
+  "pagination": "no",
+  "name": "CardOfElma",
+  "changelogDate": "20211122123159"
+}
