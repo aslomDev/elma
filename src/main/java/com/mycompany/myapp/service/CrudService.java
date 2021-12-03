@@ -24,10 +24,12 @@ public class CrudService {
                card.setBalance(cardDTO.getBalance());
                if (cardDTO.getCredit()){
                    card.setCardTypeElma(credit.CREDIT);
+               }else {
+                   card.setCardTypeElma(credit.DEBIT);
                }
                card.setExpireDate(cardDTO.getExpireDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-               card.setPan(cardDTO.getCardNumber()+cardDTO.getBankNumber()+cardDTO.getSysNumber());
-               card.setMaskedPan(cardDTO.getCardNumber()+"SGJKLSD"+cardDTO.getSysNumber());
+               card.setPan(cardDTO.getPan());
+               card.setMaskedPan(card.getMaskedPan());
                card.setTypeCard(cardDTO.getCardType());
                return cardOfElmaRepository.save(card).flatMap(Mono::just);
     }

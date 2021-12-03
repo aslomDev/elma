@@ -20,6 +20,10 @@ public class HumoCardDTO implements Serializable {
 
     private String sysNumber;
 
+    private String pan;
+
+    private String maskedPan;
+
     private HUMO cardType;
 
     private Boolean credit;
@@ -102,6 +106,22 @@ public class HumoCardDTO implements Serializable {
         this.humoClient = humoClient;
     }
 
+    public String getPan() {
+        return pan;
+    }
+
+    public void setPan(String pan) {
+        this.pan = pan;
+    }
+
+    public String getMaskedPan() {
+        return maskedPan;
+    }
+
+    public void setMaskedPan(String maskedPan) {
+        this.maskedPan = maskedPan;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -132,6 +152,8 @@ public class HumoCardDTO implements Serializable {
             ", bankNumber='" + getBankNumber() + "'" +
             ", sysNumber='" + getSysNumber() + "'" +
             ", cardType='" + getCardType() + "'" +
+            ", pan='" + getPan() + "'" +
+            ", maskedPan='" + getMaskedPan() + "'" +
             ", credit='" + getCredit() + "'" +
             ", balance=" + getBalance() +
             ", expireDate='" + getExpireDate() + "'" +
